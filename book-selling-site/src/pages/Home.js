@@ -4,7 +4,9 @@ import Title from "../component/Title.js";
 const Home = () => {
   return (
     <>
-      <Title />
+      <Title value="FirstName" />
+      <Title value="MiddleName" />
+      <Title value="LastName" />
     </>
   );
 };
