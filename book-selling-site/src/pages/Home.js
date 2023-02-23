@@ -13,6 +13,7 @@ class Home extends Component {
   render() {
     return (
       <>
+        <div className="home">This is home page</div>
         <Title value={this.state.title} />
         <Title value={this.state.description} />
         {/* <Title value="LastName" /> */}
