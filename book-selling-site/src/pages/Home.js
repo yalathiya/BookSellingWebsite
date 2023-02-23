@@ -1,14 +1,24 @@
 import React from "react";
+import { Component } from "react";
 import Title from "../component/Title.js";
 
-const Home = () => {
-  return (
-    <>
-      <Title value="FirstName" />
-      <Title value="MiddleName" />
-      <Title value="LastName" />
-    </>
-  );
-};
+class Home extends Component {
+  constructor() {
+    super();
+    this.state = {
+      title: "Book Selling Website",
+      description: "You can sell as well as buy books on this website",
+    };
+  }
+  render() {
+    return (
+      <>
+        <Title value={this.state.title} />
+        <Title value={this.state.description} />
+        {/* <Title value="LastName" /> */}
+      </>
+    );
+  }
+}
 
 export default Home;
