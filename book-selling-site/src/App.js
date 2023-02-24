@@ -8,9 +8,23 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Counter />
-        <Home />
-        <About />
+        {/* <Counter /> */}
+        <button
+          onClick={() => {
+            return <Home />;
+          }}
+        >
+          Home Page
+        </button>
+        <button
+          onClick={() => {
+            return <About />;
+          }}
+        >
+          About Page
+        </button>
+        {/* <Home /> */}
+        {/* <About /> */}
       </>
     );
   }
