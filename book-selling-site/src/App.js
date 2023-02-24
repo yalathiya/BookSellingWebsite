@@ -5,26 +5,23 @@ import Counter from "./component/Counter.js";
 import { render } from "@testing-library/react";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showHome: true,
+    };
+  }
+  toggleShowHome = () => {
+    this.setState({ showHome: !this.state.showHome });
+  };
   render() {
     return (
       <>
         {/* <Counter /> */}
-        <button
-          onClick={() => {
-            return <Home />;
-          }}
-        >
-          Home Page
+        <button onClick={this.toggleShowHome}>
+          {this.state.showHome ? "Home" : "About"}
         </button>
-        <button
-          onClick={() => {
-            return <About />;
-          }}
-        >
-          About Page
-        </button>
-        {/* <Home /> */}
-        {/* <About /> */}
+        {this.state.showHome ? <Home /> : <About />}
       </>
     );
   }
