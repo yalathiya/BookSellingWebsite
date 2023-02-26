@@ -3,6 +3,8 @@ import Home from "./pages/Home";
 import About from "./component/About";
 import Counter from "./component/Counter.js";
 import { render } from "@testing-library/react";
+import Title from "./component/Title";
+import List from "./component/List.js";
 
 class App extends React.Component {
   constructor(props) {
@@ -18,6 +20,7 @@ class App extends React.Component {
     return (
       <>
         {/* <Counter /> */}
+        <List />;
         <button onClick={this.toggleShowHome}>
           {this.state.showHome ? "Home" : "About"}
         </button>
